@@ -71,6 +71,102 @@ h1 {
     flex-direction: row;
 }
 
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Arial, sans-serif;
+font-size: 16px;
+color: #333;
+background-color: #f2f2f2;
+}
+
+.caja {
+width: 350px;
+margin: 50px auto;
+padding: 20px;
+background-color: white;
+border: 1px solid #ccc;
+}
+
+h1 {
+text-align: center;
+margin-bottom: 20px;
+color: #222;
+}
+
+.login form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+label {
+font-weight: bold;
+}
+
+input {
+padding: 5px;
+border: 1px solid #999;
+}
+
+button {
+padding: 8px;
+background-color: #333;
+color: white;
+border: none;
+}
+
+button:hover {
+background-color: #555;
+}
+
+p {
+text-align: center;
+margin-top: 15px;
+}
+
+a {
+color: blue;
+text-decoration: none;
+}
+
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: Arial, sans-serif;
+font-size: 16px;
+color: #333;
+background-color: #f2f2f2;
+}
+
+form {
+width: 350px;
+margin: 50px auto;
+padding: 20px;
+background-color: white;
+border: 1px solid #ccc;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+label {
+font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"],
+in
+
 .nav {
     margin-top: 10px;
     margin-bottom: 10px;
