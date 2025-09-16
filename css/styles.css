@@ -16,17 +16,17 @@ body {
     color: #07070D;
 }
 
+
 .footer {
     background-color: #404446;
     color: white;
     text-align: center;
-    position: fixed;
-    width: 100vw;
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     border: 2px solid #00000065;
+    position: relative; 
 }
 
 .logo-footer {
@@ -122,4 +122,11 @@ h3 {
     width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D0D8D9;
+    color: #07070D;
+    min-height: 100vh; 
 }
