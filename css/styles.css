@@ -21,13 +21,12 @@ body {
     color: white;
     text-align: center;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     justify-content: space-between;
     border: 2px solid #00000065;
-
 }
 
 .logo-footer {
@@ -91,6 +90,7 @@ font-size: 14px;
     background-color: white;
     width: 85vw;
     border-left:2px solid #000000 ;
+    flex-wrap: wrap;
 
 }
 
@@ -108,4 +108,21 @@ h3 {
 .auth-container {
     display: flex;
     flex-direction: row;
+}
+
+.item-card {
+    
+    border: 1px solid #0000007f;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 30vh;
+    text-align: center;
+    height: 40vh;
+}
+
+.item-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
