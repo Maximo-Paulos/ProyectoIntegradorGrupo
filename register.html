@@ -1,28 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Autos de Lujo</title>
     <link rel="stylesheet" href="./css/styles.css">
-  </head>
-  <body>
-    <form action="./login.html" method="get">
-      <label for="correo"> Email </label>
-      <input type="email" name="email" id="correo" />
+</head>
 
-      <label for="pass"> Contraseña </label>
-      <input type="password" name="password" id="pass" />
+<body>
+    <header class="header">
+        <div class="logo-container"> <a href="index.html"><img class="logo-footer" src="./img/logo.png" alt=""></a>
+            <h1><a href="index.html">ZapsBack</a></h1>
+        </div>
+        <div class="search-container">
+            <form action="./login.html" method="get">
+                <input type="text" placeholder="Buscar..." name="q">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <div class="auth-container">
+            <h3><a href="login.html">LogIn</a></h3>
+            <h3> / </h3>
+            <h3><a href="register.html">Register</a></h3>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside>
+            <nav class="nav">
+                <ul>
+                    <li><a href="products.html">Beauty</a></li>
+                    <li><a href="products.html">Fragrances</a></li>
+                    <li><a href="products.html">Furniture</a></li>
+                    <li><a href="products.html">Groceries</a></li>
+                    <li><a href="products.html">Home Decoration</a></li>
+                    <li><a href="products.html">Kitchen Accessories</a></li>
+                    <li><a href="products.html">Laptops</a></li>
+                    <li><a href="products.html">Mens Shirts</a></li>
+                    <li><a href="products.html">Mens Shoes</a></li>
+                    <li><a href="products.html">Mens Watches</a></li>
+                    <li><a href="products.html">Mobile Accessories</a></li>
+                    <li><a href="products.html">Motorcycle</a></li>
+                    <li><a href="products.html">Skin Care</a></li>
+                    <li><a href="products.html">Smartphones</a></li>
+                    <li><a href="products.html">Sports Accessories</a></li>
+                    <li><a href="products.html">Sunglasses</a></li>
+                    <li><a href="products.html">Tablets</a></li>
+                    <li><a href="products.html">Tops</a></li>
+                    <li><a href="ferrari.html">Ferrari</a></li>
+                    <li><a href="lamborghini.html">Lamborghini</a></li>
+                    <li><a href="bugatti.html">Bugatti</a></li>
+                    <li><a href="products.html">Womens Bags</a></li>
+                    <li><a href="products.html">Womens Dresses</a></li>
+                    <li><a href="products.html">Womens Jewellery</a></li>
+                    <li><a href="products.html">Womens Shoes</a></li>
+                    <li><a href="products.html">Womens Watches</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="items">
+            <div class="caja">
+                <h1>Register</h1>
+                <div class="register">
+                    <form action="./login.html" method="get">
+                        <label for="correo"> Email </label>
+                        <input type="email" name="email" id="correo" /><br>
 
-      <label for="passw"> Repeti la contraseña </label>
-      <input type="password" name="password" id="passw" />
+                        <label for="pass"> Contraseña </label>
+                        <input type="password" name="password" id="pass" /><br>
 
-      <button type="submit">Registrarme</button>
+                        <label for="passw"> Repeti la contraseña </label>
+                        <input type="password" name="password" id="passw" /><br>
 
-      <label for="terminos">Acepto términos y condiciones></label>
-      <input type="checkbox" id="terminos" name="terminos" />
+                        <button type="submit">Registrarme</button><br>
 
-      <p><a href="./login.html"> Ya estoy registrado</a></p>
-    </form>
-  </body>
+                        <label for="terminos">Acepto términos y condiciones</label>
+                        <input type="checkbox" id="terminos" name="terminos" /><br>
+
+                        <p><a href="./login.html"> Ya estoy registrado</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <div> <img class="logo-footer" src="./img/logo.png" alt=""> </div>
+        <div>
+            <p class="footer-names">Creado por: Maximo Paulos , Fernando Warszawiak , Bautista Zapata</p>
+        </div>
+        <div class="mapa"> </div>
+    </footer>
+</body>
+
 </html>
