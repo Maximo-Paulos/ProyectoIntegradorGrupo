@@ -115,7 +115,7 @@ li {
     background-color: white;
     width: 85vw;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
 }
 
 aside {
@@ -160,6 +160,98 @@ body {
     min-height: 100vh; 
 }
 
+
+.caja-index {
+  background-color: #ccc9b2;
+  border: 2px #000000 solid;
+  height: 300px;            
+  width: 300px;
+  margin-left: 30vw;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+.caja-index input[type="email"],
+.caja-index input[type="password"] {
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+
+.login-buttonind {
+  width: 95%;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  background-color: #000000;
+  border-radius: 8px;
+  height: 35px;
+  margin-top: 10px;
+  margin-left: 7px;
+ 
+}
+.register-index {
+    display: block;
+    height: 35px;
+    width: 95%;
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+  background-color: #000000;
+  border-radius: 8px;
+  margin-top: 16px;
+  margin-left: 10px;
+}
+
+.caja-index h1 {
+    color: black;
+}
+
+
+/* empiezo css register aca*/
+
+.caja-register {
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #ccc9b2;
+width: 300px;
+height: 335px;
+margin-left: 30vw;
+border-radius: 20px;
+padding: 20px;
+
+}
+.title-register{
+color: #000000
+;
+
+}
+.caja-register input[type="email"],
+.caja-register input[type="password"] {
+      width: 95%;
+  margin-bottom: 10px;
+    padding: 5px;
+  border: 1px solid #aaa;
+  border-radius: 5px; }
+
+.register-label {
+font-size: 18px;
+width: 95%;
+height: 35px;
+background-color: black;
+border-radius: 9px;
+color: white;
+
+
+}
 .item-title {
     font-size: 18px;
     margin: 10px 0;
