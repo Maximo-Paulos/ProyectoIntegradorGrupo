@@ -126,7 +126,7 @@ aside {
 
 h3 {
     color: #ffffff;
-    size: 10dvh;
+    size: 10vh;
 }
 
 .auth-container {
@@ -140,7 +140,7 @@ h3 {
     border: 1px solid #0000007f;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px;
+    margin: 25px;
     width: 30vh;
     text-align: center;
     height: 40vh;
@@ -267,6 +267,19 @@ color: white;
     background-color:rgba(214, 236, 239, 0.562) ;
 }
 
+.category-section {
+    background-color: white;
+    border-left: 2px solid #000000;
+    position: sticky;
+    width: 85vw;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+.sin-resultado {
+    display: none;
+}
+
 /*
 @media (max-width: 760px) {
 .auth-container {
@@ -323,4 +336,3 @@ a {
 
 }
 
-*/
