@@ -116,6 +116,7 @@ li {
     width: 85vw;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-around;
 }
 
 aside {
@@ -141,14 +142,14 @@ h3 {
     border-radius: 5px;
     padding: 10px;
     margin: 25px;
-    width: 30vh;
+    width: auto;
     text-align: center;
-    height: 40vh;
+    height: auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .item-image {
-    width: 100%;
+    width: 20vw;
     height: auto;
     border-radius: 5px;
 }
@@ -280,4 +281,62 @@ color: white;
     display: none;
 }
 
+@media (max-width: 768px) {
+    .aside-nav {
+        display: none;
+    }
 
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .items {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .item-image {
+        width: 80vw;
+    }
+
+    .item-card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .logo-footer {
+        width: 30vw;
+        margin-bottom: 10px;
+    }
+
+    .nombre {
+        font-size: 4vh;
+    }
+
+    .footer-names {
+        font-size: 12px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-container {
+        margin-top: 10px;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+}
