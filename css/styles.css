@@ -145,6 +145,8 @@ h3 {
     text-align: center;
     height: 40vh;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    height: fit-content;
+
 }
 
 .item-image {
@@ -308,9 +310,14 @@ color: white;
     text-decoration: none;
 }
 
+
+
 @media (max-width: 768px) {
+    aside {
+        width: 100vw;
+    }
     .aside-nav {
-    max-width: 20vw;    
+    width: 100vw;    
     }
 
     .main-container {
@@ -352,6 +359,7 @@ color: white;
     }
 }
 
+
 @media (max-width: 320px) {
     .aside-nav {
         display: none;
@@ -375,73 +383,4 @@ color: white;
     .main-container {
     width: 100%;    
     }
-
 }
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #D0D8D9;
-    color: #07070D;
-    min-height: 100vh; 
-}
-.product_image{
-    
-    width:50%;
-    height:auto;
-    border-radius: 5px;
-    padding: 0%;
-}
-.Ferrari_1{
-  font-size:60px;
-  text-align: center;
-
-}
-.tag{
-    font-size: 30px;
-}
-.lista_1{
-    font-size: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-}
-.contenedor_tags{
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 10px;
-
-}
-.tag{
-padding-right: 30px;
-}
-.item{
-    padding-right: 30px;
-}
-.marca{
-    padding-bottom: 10px;
-}
-.precio{
-    padding-top:10px;
-}
-.descripcion{
-        text-align: center;
-
-}
-.contenedor_tags{
-    margin-bottom: 30px;
-}
-
-.comentario_1{
-    padding-bottom: 20px;
-}
-.comentario_2{
-    padding-bottom: 20px;
-}
-
-.search-container {
-        margin-top: 10px;
-    }
-
-.logo-container {
-        margin-bottom: 10px;
-    }
