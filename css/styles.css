@@ -20,7 +20,7 @@ body {
 section{
     background-color: white;
     border-left: 2px solid #000000;
-        position: sticky;
+    position: sticky;
 
 
 }
@@ -287,7 +287,7 @@ color: white;
 
 @media (max-width: 768px) {
     .aside-nav {
-        display: none;
+    max-width: 20vw;    
     }
 
     .main-container {
@@ -301,7 +301,7 @@ color: white;
     }
 
     .item-image {
-        width: 80vw;
+        width: 60vw;
     }
 
     .item-card {
@@ -316,8 +316,7 @@ color: white;
     }
 
     .logo-footer {
-        width: 30vw;
-        margin-bottom: 10px;
+        width: 20vw;
     }
 
     .nombre {
@@ -331,15 +330,29 @@ color: white;
 }
 
 @media (max-width: 320px) {
+    .aside-nav {
+        display: none;
+    }
+
     .header {
         flex-direction: column;
         text-align: center;
     }
+    .logo-footer {
+    display: none;   
+    }
+    .auth-container {
+        justify-content: center;
+        margin-top: 10px;
+    }
 
-.item-image {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+    .item-image {
+        width: 70vw;
+    }
+    .main-container {
+    width: 100%;    
+    }
+
 }
 
 body {
@@ -354,10 +367,6 @@ body {
     height:auto;
     border-radius: 5px;
     padding: 0%;
-
-   
-
-
 }
 .Ferrari_1{
   font-size:60px;
@@ -406,11 +415,10 @@ padding-right: 30px;
     padding-bottom: 20px;
 }
 
-    .search-container {
+.search-container {
         margin-top: 10px;
     }
 
-    .logo-container {
+.logo-container {
         margin-bottom: 10px;
     }
-}
