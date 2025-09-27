@@ -19,10 +19,7 @@ body {
 
 section{
     background-color: white;
-    border-left: 2px solid #000000;
     position: sticky;
-
-
 }
 
 .aside-nav {
@@ -238,10 +235,6 @@ margin-left: 10px
     margin-bottom: 10px;
 }
 
-
-
-
-
 .caja-register {
 display: flex;
 flex-direction: column;
@@ -316,6 +309,127 @@ color: white;
     align-items: center;
 }
 
+.mapa {
+    padding: 20px;
+    padding-right: 5vw;
+
+}
+
+.caja_completa {
+  border: 1px solid  #000000;  
+  width: 85vw;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.items-producto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.imagen_producto {
+    width: 30vw;
+    margin-right: 20px;
+}
+
+.titulos-producto {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.img-prod-desc {
+    margin-top: 10px;
+    width: 47vw;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+    border: 1px solid  #000000; 
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+}
+
+.descripcion {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: auto;
+    height: 59vh;
+}
+
+.descripcion {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.marca {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.describi {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.precio {
+  font-size: 22px;
+  color: #00a650; 
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.linea{
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.comentarios {
+  width: 100%;
+    margin-top: 30px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.comentarios-caja {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.comentarios h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.comentarios h3 {
+  font-size: 16px;
+  color: #f5a623; 
+  margin-bottom: 5px;
+}
+
+.comentarios p {
+  font-size: 14px;
+  color: #444;
+  margin: 10px;
+}
 
 
 @media (max-width: 768px) {
@@ -367,6 +481,13 @@ color: white;
 
 
 @media (max-width: 320px) {
+    .caja_completa {
+        width: 100vw;
+    }
+
+    .img-prod-desc {
+        width: 86.5vw;
+    }
     .aside-nav {
         display: none;
     }
@@ -390,94 +511,7 @@ color: white;
     width: 100%;    
     }
 
-}
-
-.caja_completa {
-  max-width: 900px;
-  margin: 20px auto;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  border-radius: 8px;
-  padding: 20px;
-}
-
-.titulos-producto {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.imagen_producto {
-  width: 40%;
-  text-align: center;
-}
-
-.product_image {
-
-max-width: 100%;
-  border-radius: 8px;
-}
-
-.descripcion {
-  width: 55%;
-  margin-left: 5%;
-}
-
-.descripcion h1 {
-  font-size: 22px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.marca {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.describi {
-  font-size: 15px;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-.precio {
-  font-size: 22px;
-  color: #00a650; 
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.comentarios {
-  margin-top: 30px;
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
-}
-
-.comentarios h2 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.comentarios h3 {
-  font-size: 16px;
-  color: #f5a623; 
-  margin-bottom: 5px;
-}
-
-.comentarios p {
-  font-size: 14px;
-  color: #444;
-  margin: 10px;
-}
-
-
-  
-  
     .mapa {
-        display: none;
+    display: none;
     }
-
+}
