@@ -1,12 +1,7 @@
-let formularioLogin = document.querySelector(".caja-index");
-let campoEmailLogin = document.querySelector("#correo");
-let campoPassLogin = document.querySelector("#pass");
+let formularioLogin = document.querySelector(".login-index");
+let campoEmailLogin = document.querySelector("#email");
+let campoPassLogin = document.querySelector("#password");
 
-formularioLogin.addEventListener("submit", function (event) {
+formularioLogin.addEventListener("submit", function(event) {
     event.preventDefault();
-
-    if (campoEmailLogin.value == "") {
-        alert("El campo email es obligatorio");
-    }
-
 });
