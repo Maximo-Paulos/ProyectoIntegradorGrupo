@@ -20,9 +20,7 @@ formularioLogin.addEventListener("submit", function (event) {
         return;
     }
 
-    // Guardar el email en localStorage
     localStorage.setItem("userEmail", campoEmailLogin.value);
 
-    // Redirigir a la página principal
     window.location.href = "./index.html";
 });
