@@ -2,7 +2,7 @@ console.log("Hola mundo desde index.js");
 // Listado de productos
 
 const urlProducts = "https://dummyjson.com/products/category/vehicle"; 
-let productsContainer = document.querySelector('.items');
+let productsContainer = document.querySelector('.items1');
 const urlProducts2 = "https://dummyjson.com/products/category/smartphones";
 let productsContainer2 = document.querySelector('.items2');
 

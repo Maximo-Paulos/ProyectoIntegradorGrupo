@@ -98,18 +98,19 @@ window.addEventListener("load", function () {
                         estrellas += "★";
                     }
 
-                    contenedorReviews.innerHTML += `
-                        <div class="comentarios-caja">
-                            <h3>${estrellas}</h3>
-                            <p><strong>${review.reviewerName}:</strong> "${review.comment}"</p>
-                            <p>${review.date}</p>
-                        </div>
-                    `;
-                }
-            }
-        })
-  .catch(function (error) {
-     console.log("El error es: " + error);
-         });
+    reviews.innerHTML += `
+    <div class="comentarios-caja">
+        <h3>${emojiRating}</h3>
+        <p><strong>${review.reviewerName}:</strong> "${review.comment}"</p>
+        <p>${review.date}</p>
+       
+     </div>
+    `;
+ }
+    
+})
+.catch(function (error) {
+    console.log("El error es: " + error);
+});
 
 });

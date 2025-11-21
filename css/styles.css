@@ -334,7 +334,7 @@ body {
 }
 
 .imagen_producto {
-    width: 30vw;
+    width: 10px;
     margin-right: 20px;
 }
 
@@ -346,7 +346,7 @@ body {
 
 .img-prod-desc {
     margin-top: 10px;
-    width: 47vw;
+    width: 300px;
     height: auto;
     border-radius: 5px;
     display: block;
@@ -360,16 +360,17 @@ body {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding: 40px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f9f9f9;
-    width: auto;
-    height: 59vh;
+    width: 100vh;
+    height: 38vh;
+
 }
 
 .descripcion {
-    font-size: 22px;
+    font-size: 20px;
     color: #333;
     margin-bottom: 10px;
 }
