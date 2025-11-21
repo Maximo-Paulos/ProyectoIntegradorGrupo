@@ -1,65 +1,115 @@
-let query =location.search;
-let queryObj = new URLSearchParams (query);
-let produtctoElegido = queryObj.get ("id");
+window.addEventListener("load", function () {
 
+   
+    let query = location.search;
+    let queryObj = new URLSearchParams(query);
+    let productoElegido = queryObj.get("id");
 
-let productUrl = `https://dummyjson.com/products/${productoElegido}`;
-
-let producto = document.querySelector(".items-producto");
-let reviews = document.querySelector (".comentarios-producto")
-
-fetch (productUrl)
-.then (function (response){
-    return response.json();
-})
-.then (function (data){
-    console.log (data);
-
-    let tagsTexto="";
-    for (let i=0; i<data.tags.length && i<3; i++) {
-        tagsTexto += `#${data.tags[i]}`;
+   
+    if (productoElegido == null) {
+        console.log("No hay id en la URL");
+        return;
     }
 
-
-    producto.innerHTML=`
-    <div class="imagen-producto">
-        <img src="${data.images[0]}" alt="${data.title}">
-    </div>
     
-    <section class="descripcion-producto">
-        <h1 class="Ferrari_1">${data.title}</h1>
-        <h2 class="marca"> Marca: ${data.brand} </h2>
-        <h2 class="precio">Precio: $${data.price}</h2>
-        <h4 class="describi">${data.description}</h4>
+    let productUrl = ⁠ https://dummyjson.com/products/${productoElegido} ⁠;
 
-          <p><strong>Categoría:</strong> ${data.category}</p>
-          <p><strong>Stock:</strong> ${data.stock}</p>
-          <p><strong>Tags:</strong> ${tagsTexto}</p>
-        </section>
-    `;
     
-    review.innerHTML="<h2>Comentarios:</h2>";
+    let imgProducto = document.querySelector(".img-prod-desc");
+    let tituloProducto = document.querySelector(".Ferrari_1");
+    let marcaProducto = document.querySelector(".marca");
+    let precioProducto = document.querySelector(".precio");
+    let descripcionProducto = document.querySelector(".describi");
 
-   for (let i=0; i<data.reviews.length; i++) {
+    let categoriaProducto = document.querySelector(".producto-categoria");
+    let stockProducto = document.querySelector(".producto-stock");
+    let tagsProducto = document.querySelector(".producto-tags");
 
-    let review = data.reviews[i];
-    let emojiRating="";
+    let contenedorReviews = document.querySelector(".comentarios");
 
-    for (let r = 0; r < review.rating; r++) {
-        emojiRating +=  "★";
-    }
+   
+    fetch(productUrl)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
 
-    reviews.innerHTML += `
-    <div class="comentarios-caja">
-        <h3>${emojiRating}</h3>
-        <p><strong>${review.reviewerName}:</strong> "${review.comment}"</p>
-        <p>${review.date}</p>
-       
-     </div>
-    `;
- }
-    
-})
-.catch(function (error) {
-    console.log("El error es: " + error);
+            if (imgProducto) {
+                imgProducto.src = data.images[0];
+                imgProducto.alt = data.title;
+            }
+
+            
+            if (tituloProducto) {
+                tituloProducto.innerText = data.title;
+            }
+
+          
+            if (marcaProducto) {
+                marcaProducto.innerText = "Marca: " + data.brand;
+            }
+
+          
+            if (precioProducto) {
+                precioProducto.innerText = "Precio: $" + data.price;
+            }
+
+   
+            if (descripcionProducto) {
+                descripcionProducto.innerText = data.description;
+            }
+
+            if (categoriaProducto) {
+                categoriaProducto.innerHTML =
+                    `<strong>Categoría:</strong> 
+                     <a href="./category.html?category=${data.category}">
+                        ${data.category}
+                     </a>`;
+            }
+
+         
+            if (stockProducto) {
+                stockProducto.innerHTML = ⁠ <strong>Stock:</strong> ${data.stock} ⁠;
+            }
+
+            
+            if (tagsProducto) {
+                let tagsTexto = "";
+                for (let i = 0; i < data.tags.length && i < 3; i++) {
+                 tagsTexto += `#${data.tags[i]} `;
+                }
+                tagsProducto.innerHTML = ⁠ <strong>Tags:</strong> ${tagsTexto} ⁠;
+            }
+
+            
+
+            if (contenedorReviews) {
+                
+                contenedorReviews.innerHTML = "<h2>Comentarios:</h2>";
+
+                for (let i = 0; i < data.reviews.length; i++) {
+
+                    let review = data.reviews[i];
+
+                   
+                    let estrellas = "";
+                    for (let r = 0; r < review.rating; r++) {
+                        estrellas += "★";
+                    }
+
+                    contenedorReviews.innerHTML += `
+                        <div class="comentarios-caja">
+                            <h3>${estrellas}</h3>
+                            <p><strong>${review.reviewerName}:</strong> "${review.comment}"</p>
+                            <p>${review.date}</p>
+                        </div>
+                    `;
+                }
+            }
+        })
+  .catch(function (error) {
+     console.log("El error es: " + error);
+         });
+
 });
