@@ -4,10 +4,14 @@ window.addEventListener("load", function () {
     let queryObj = new URLSearchParams(query);
     let productoElegido = queryObj.get("id");
 
+
     if (productoElegido == null) {
         console.log("No hay id en la URL");
         return;
     }
+
+    let productUrl = `https://dummyjson.com/products/${productoElegido}`;
+
 
     let productUrl = ⁠ https://dummyjson.com/products/${productoElegido} ⁠;
 
@@ -60,7 +64,7 @@ window.addEventListener("load", function () {
             }
 
             if (stockProducto) {
-                stockProducto.innerHTML = ⁠ <strong>Stock:</strong> ${data.stock} ⁠;
+                stockProducto.innerHTML = `<strong>Stock:</strong> ${data.stock}`;
             }
 
             if (tagsProducto) {
@@ -68,7 +72,7 @@ window.addEventListener("load", function () {
                 for (let i = 0; i < data.tags.length && i < 3; i++) {
                     tagsTexto += `#${data.tags[i]} `;
                 }
-                tagsProducto.innerHTML = ⁠ <strong>Tags:</strong> ${tagsTexto} ⁠;
+                tagsProducto.innerHTML = `<strong>Tags:</strong> ${tagsTexto}`;
             }
 
             if (contenedorReviews) {
