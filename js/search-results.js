@@ -66,7 +66,7 @@ if (buscador !== null && buscador !== "") {
 
     if (data.products.length == 0) {
       mensajeSinResultado.style.display = "block";
-      
+      alert("no items found");
     }
 
      for (let i = 0; i < data.products.length; i++) {
