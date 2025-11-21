@@ -3,6 +3,7 @@ console.log("Hola mundo desde index.js");
 
 const urlProducts = "https://dummyjson.com/products/category/vehicle"; 
 let productsContainer = document.querySelector('.items');
+const urlProducts2 = "https://dummyjson.com/products/category/smartphones";
 let productsContainer2 = document.querySelector('.items2');
 
 fetch(urlProducts)
@@ -23,12 +24,24 @@ fetch(urlProducts)
                     <h2 class="item-title">${product.title}</h2>
                     <p class="item-description">${product.description}</p>
                     <p class="item-price">${product.price}</p>
-                    <a class="verDetalle" href="./product.html?">ver detalle</a>
+                    <a class="verDetalle" href="./product.html?id=${product.id}">ver detalle</a>
                 </article>
             `;
         }
+    }) 
+    .catch(function(error) {
+        console.log("Error fetching products: " + error);
+    });
 
-        // Segundo contenedor
+fetch(urlProducts2)
+    .then(function(res) {
+        return res.json();
+    })
+    .then(function(data) {
+        console.log(data);
+        let products = data.products;
+
+        // Primer contenedor
         for (let i = 0; i < products.length; i++) {
             let product = products[i];
             console.log(product);
@@ -38,7 +51,7 @@ fetch(urlProducts)
                     <h2 class="item-title">${product.title}</h2>
                     <p class="item-description">${product.description}</p>
                     <p class="item-price">${product.price}</p>
-                    <a class="verDetalle" href="./product.html?">ver detalle</a>
+                    <a class="verDetalle" href="./product.html?id=${product.id}">ver detalle</a>
                 </article>
             `;
         }
@@ -48,6 +61,7 @@ fetch(urlProducts)
     });
 
 
+    
 // Buscador
 
 let formbuscador = document.querySelector('.serch-bar');
