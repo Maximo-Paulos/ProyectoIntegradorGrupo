@@ -1,26 +1,26 @@
-let formularioLogin = document.querySelector(".login-index");
-let campoEmailLogin = document.querySelector("#email");
-let campoPassLogin = document.querySelector("#password");
+let formulariologin = document.querySelector(".login-index");
+let emaillogin = document.querySelector("#email");
+let passlogin = document.querySelector("#password");
 
-formularioLogin.addEventListener("submit", function (event) {
+formulariologin.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    if (campoEmailLogin.value === "") {
+    if (emaillogin.value === "") {
         alert("El campo email es obligatorio");
         return;
     }
 
-    if (campoPassLogin.value === "") {
+    if (passlogin.value === "") {
         alert("El campo contraseña es obligatorio");
         return;
     }
 
-    if (campoPassLogin.value.length < 6) {
+    if (passlogin.value.length < 6) {
         alert("La contraseña debe tener al menos 6 caracteres");
         return;
     }
 
-    localStorage.setItem("userEmail", campoEmailLogin.value);
+    localStorage.setItem("userEmail", emaillogin.value);
 
     window.location.href = "./index.html";
 });

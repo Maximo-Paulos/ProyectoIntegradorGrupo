@@ -520,3 +520,11 @@ body {
         display: none;
     }
 }
+
+.logoutjs {
+    padding: 20px;
+    
+}
+.logoutjs:hover{
+    color: red;
+}
