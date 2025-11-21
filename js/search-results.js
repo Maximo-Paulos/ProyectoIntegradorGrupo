@@ -1,19 +1,56 @@
 /*
-Un formulario con un buscador que al buscar debe enviarnos a la página “resultados de búsqueda”. El buscador deberá validar:
-Que el campo de búsqueda no esté vacío. Si está vacío debe avisarle al usuario por pantalla.
-Que el término buscado tenga al menos 3 caracteres. Si no los tiene debe avisarle al usuario por pantalla.
-
+<div class="search-container">
+            <form class="serch-bar" action="./search-result.html" method="get">
+                <input class = "buscar" type="text" placeholder="Buscar..." name="buscador" value="">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
 */ 
+
+
+let formbuscador = document.querySelector('.serch-bar');
+let inputBuscar = document.querySelector('.buscar');
+
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
 let buscador = queryStringObj.get('buscador');
 
-console.log(buscador);
-
-if (buscador == ''){
+formbuscador.addEventListener('submit', function(event)
+{
+    event.preventDefault();
+    if (inputBuscar.value == ''){
     alert("El campo de búsqueda no puede estar vacío");
-} else if (buscador.length < 3) {
+} else if (inputBuscar.value.length < 3) {
     alert("El término buscado debe tener al menos 3 caracteres");
 
 }
-console.log("Hola mundo desde search-results.js");
+else {
+    this.submit();
+}
+
+});
+
+
+
+let URLcategorias = 'https://dummyjson.com/products/categories'
+let categorias = document.querySelector('.categorias');
+
+fetch(URLcategorias)
+    .then(function(res) {
+        return res.json();
+    })
+    .then(function(data) {
+        console.log(data);
+        for (let i = 0; i < data.length; i++) {
+            let categoria = data[i];
+            categorias.innerHTML += `
+            <li><a href="./category.html?categoria=${categoria.url}">${categoria.name}</a></li>
+            `;
+            console.log(categoria.url);
+        }
+        
+            
+    })
+    .catch(function(error) {
+        console.log("Error fetching products: " + error);
+    });
