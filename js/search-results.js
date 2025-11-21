@@ -7,45 +7,9 @@
         </div>
 */ 
 
-
-let formbuscador = document.querySelector('.serch-bar');
-let inputBuscar = document.querySelector('.buscar');
-
-let queryString = location.search;
-let queryStringObj = new URLSearchParams(queryString);
-let buscador = queryStringObj.get('buscador');
-
-formbuscador.addEventListener('submit', function(event) {
-    event.preventDefault();
-    if (inputBuscar.value == '') {
-        alert("El campo de búsqueda no puede estar vacío");
-    } else if (inputBuscar.value.length < 3) {
-        alert("El término buscado debe tener al menos 3 caracteres");
-    } else {
-        this.submit();
-    }
-});
-
-
-let URLcategorias = 'https://dummyjson.com/products/categories';
-let categorias = document.querySelector('.categorias');
-
-fetch(URLcategorias)
-    .then(function(res) {
-        return res.json();
-    })
-    .then(function(data) {
-        console.log(data);
-        for (let i = 0; i < data.length; i++) {
-            let categoria = data[i];
-            categorias.innerHTML += `
-                <li><a href="./category.html?categoria=${categoria}">${categoria}</a></li>
-            `;
-        }
-    })
-    .catch(function(error) {
-        console.log("Error fetching categories: " + error);
-    });
+let queryStringserch = location.search;
+let queryStringObjserch = new URLSearchParams(queryStringserch);
+let buscadorserch = queryStringObjserch.get('buscador');
 
 
 let itemsContainer = document.querySelector('.items');
@@ -54,9 +18,11 @@ let mensajeSinResultado = document.querySelector('.sin-resultado');
 itemsContainer.innerHTML = "";
 mensajeSinResultado.style.display = "none";
 
-if (buscador !== null && buscador !== "") {
 
-    fetch(`https://dummyjson.com/products/search?q=${buscador}`)
+
+if (buscadorserch !== null && buscadorserch !== "") {
+
+    fetch(`https://dummyjson.com/products/search?q=${buscadorserch}`)
         .then(function(res) {
             return res.json();
         })
